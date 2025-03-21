@@ -12,7 +12,7 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 
 
 ## 1. Exploratory Data Analysis
-**Project Description**: EDA of City of Vancouver data  
+**Project Description**: EDA of City of Vancouver water quality data  
 **Objective**: Analyze and understand how changes in temperature might affect turbidity levels.
 
 **What I Did**  
