@@ -110,20 +110,20 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 1. **Completeness**: `operating permit number` must be at least 95% populated  
 2. **Uniqueness**: Turbidity values must be at least 99% unique  
 3. **Freshness**: Exclude data older than 1000 days
+![COV](DataQC.png)
 
 - **AWS Glue Visual ETL** pipeline splits data into “passed” or “failed” S3 buckets based on rules
+![COV](DataETL.png)
 
 ### 5.2 Monitoring with AWS CloudWatch
 - **Dashboards**: Track S3 bucket size (raw vs. transformed)  
 - **Alarms**: Trigger if usage exceeds 40,000 bytes
+![COV](dashboard.png)
 
 **Key Takeaways**  
 - Automated data quality checks improve dataset reliability  
 - Real-time monitoring allows rapid detection of anomalies
 
-<!-- Insert a screenshot or diagram showing Data Quality checks or CloudWatch metrics:
-![Data Quality & Monitoring Dashboard](images/data_quality_monitoring.png)
--->
 
 
 
