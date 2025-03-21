@@ -88,7 +88,7 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 **What I Did**  
 - **AWS Glue DataBrew**: Cleaned and standardized student data (dropped irrelevant columns, fixed data types)  
 - **Glue Crawler & ETL**: Stored data in raw, transformed, and curated buckets in **S3**
- ![COV](ETL_UCW.png)
+![COV](ETL_UCW.png)
 - **Consolidation**: Ensured consistent IDs and metrics to enable accurate academic standing checks
 
 **Key Takeaways**  
