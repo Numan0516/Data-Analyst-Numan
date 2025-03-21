@@ -30,7 +30,8 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 - Demonstrated speed of AWS Glue DataBrew for data profiling and recipe-based cleaning
 
 ![COV](COV_Drawio.png)
-![BQ]_(BQ Example.png).
+!(BQ Example.png).
+
 
 
 ---
