@@ -24,6 +24,7 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
   1. Correlation between temperature changes and turbidity levels  
   2. Trends in turbidity over specific time periods  
   3. Identification of outlier temperature or turbidity readings
+![BQ](BQ_Example.png)
 
 **Key Takeaways**  
 - Insight into temperature–turbidity correlations  
@@ -31,7 +32,7 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 - Demonstrated speed of AWS Glue DataBrew for data profiling and recipe-based cleaning
 
 
-![BQ](BQ_Example.png)
+
 
 
 ---
