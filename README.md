@@ -30,7 +30,7 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 - Demonstrated speed of AWS Glue DataBrew for data profiling and recipe-based cleaning
 
 <!-- Example placeholder for an EDA screenshot or diagram:
-![EDA Screenshot](images/eda_screenshot.png)
+[EDA Screenshot](images/BQ Example.png)
 -->
 
 ---
