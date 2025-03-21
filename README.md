@@ -83,10 +83,12 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 ## 4. Data Wrangling
 **Project Description**: Data Wrangling for Academic Standing Procedure (UCW)  
 **Objective**: Create a **Data Analysis Pipeline (DAP)** for UCW’s academic standing data.
+![COV](UCW_DAP.png)
 
 **What I Did**  
 - **AWS Glue DataBrew**: Cleaned and standardized student data (dropped irrelevant columns, fixed data types)  
-- **Glue Crawler & ETL**: Stored data in raw, transformed, and curated buckets in **S3**  
+- **Glue Crawler & ETL**: Stored data in raw, transformed, and curated buckets in **S3**
+ ![COV](ETL_UCW.png)
 - **Consolidation**: Ensured consistent IDs and metrics to enable accurate academic standing checks
 
 **Key Takeaways**  
