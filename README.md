@@ -29,7 +29,7 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 - Simplified queries by removing irrelevant columns  
 - Demonstrated speed of AWS Glue DataBrew for data profiling and recipe-based cleaning
 
-![COV](images/COV_Drawio.png)
+![COV](main/COV_Drawio.png)
 (main/COV_Drawio.png)
 -->
 
