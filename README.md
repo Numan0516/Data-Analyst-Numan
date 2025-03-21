@@ -16,6 +16,7 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 **Objective**: Analyze and understand how changes in temperature might affect turbidity levels.
 
 **What I Did**  
+![COV](COV_Drawio.png)
 - **Data Storage**: Placed the raw data in **Amazon S3**.  
 - **Profiling**: Used **AWS Glue DataBrew** to identify missing values, invalid data types, and duplicate records.  
 - **Cleaning**: Created a **DataBrew recipe** to drop unnecessary columns (e.g., permit status, mechanical).  
@@ -29,7 +30,7 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 - Simplified queries by removing irrelevant columns  
 - Demonstrated speed of AWS Glue DataBrew for data profiling and recipe-based cleaning
 
-![COV](COV_Drawio.png)
+
 ![BQ](BQ_Example.png)
 
 
