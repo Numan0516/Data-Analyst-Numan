@@ -18,7 +18,9 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 **What I Did**  
 ![COV](COV_Drawio.png)
 - **Data Storage**: Placed the raw data in **Amazon S3**.  
-- **Profiling**: Used **AWS Glue DataBrew** to identify missing values, invalid data types, and duplicate records.  
+- **Profiling**: Used **AWS Glue DataBrew** to identify missing values, invalid data types, and duplicate records.
+![COV](profiling.png)
+![COV](profiling1.png)
 - **Cleaning**: Created a **DataBrew recipe** to drop unnecessary columns (e.g., permit status, mechanical).  
 - **Analysis**: Employed **Amazon Athena** to query the cleaned data and answer three business questions:
   1. Correlation between temperature changes and turbidity levels  
