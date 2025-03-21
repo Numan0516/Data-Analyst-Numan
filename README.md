@@ -44,8 +44,10 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 **Objective**: Provide a descriptive summary (data cataloging & summarization) **without** deep business queries.
 
 **What I Did**  
-- **Data Cataloging**: Created a **Glue Crawler** to automatically detect schemas and populate the **AWS Glue Data Catalog**.  
-- **Data Summarization**: Built an **AWS Glue ETL** pipeline to transform the dataset (generating aggregated stats like mean, median, count).  
+- **Data Cataloging**: Created a **Glue Crawler** to automatically detect schemas and populate the **AWS Glue Data Catalog**.
+  ![COV](catalog.png)
+- **Data Summarization**: Built an **AWS Glue ETL** pipeline to transform the dataset (generating aggregated stats like mean, median, count).
+- ![COV](summarization.png)
 - **Analysis**: This time, *did not* run business questions via Athena; focus was on stable summaries.
 
 **Key Takeaways**  
