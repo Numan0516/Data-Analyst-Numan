@@ -16,11 +16,16 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 **Objective**: Analyze and understand how changes in temperature might affect turbidity levels.
 
 **What I Did**  
+
 ![COV](COV_Drawio.png)
+
 - **Data Storage**: Placed the raw data in **Amazon S3**.  
 - **Profiling**: Used **AWS Glue DataBrew** to identify missing values, invalid data types, and duplicate records.
+
 ![COV](profiling.png)
+
 ![COV](profiling1.png)
+
 - **Cleaning**: Created a **DataBrew recipe** to drop unnecessary columns (e.g., permit status, mechanical).  
 - **Analysis**: Employed **Amazon Athena** to query the cleaned data and answer three business questions:
   1. Correlation between temperature changes and turbidity levels  
@@ -45,9 +50,13 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 
 **What I Did**  
 - **Data Cataloging**: Created a **Glue Crawler** to automatically detect schemas and populate the **AWS Glue Data Catalog**.
-  ![COV](catalog.png)
+
+![COV](catalog.png)
+
 - **Data Summarization**: Built an **AWS Glue ETL** pipeline to transform the dataset (generating aggregated stats like mean, median, count).
-- ![COV](summarization.png)
+
+![COV](summarization.png)
+
 - **Analysis**: This time, *did not* run business questions via Athena; focus was on stable summaries.
 
 **Key Takeaways**  
@@ -83,12 +92,15 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 ## 4. Data Wrangling
 **Project Description**: Data Wrangling for Academic Standing Procedure (UCW)  
 **Objective**: Create a **Data Analysis Pipeline (DAP)** for UCW’s academic standing data.
+
 ![COV](UCW_DAP.png)
 
 **What I Did**  
 - **AWS Glue DataBrew**: Cleaned and standardized student data (dropped irrelevant columns, fixed data types)  
 - **Glue Crawler & ETL**: Stored data in raw, transformed, and curated buckets in **S3**
+
 ![COV](ETL_UCW.png)
+
 - **Consolidation**: Ensured consistent IDs and metrics to enable accurate academic standing checks
 
 **Key Takeaways**  
@@ -110,14 +122,17 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 1. **Completeness**: `operating permit number` must be at least 95% populated  
 2. **Uniqueness**: Turbidity values must be at least 99% unique  
 3. **Freshness**: Exclude data older than 1000 days
+
 ![COV](DataQC.png)
 
 - **AWS Glue Visual ETL** pipeline splits data into “passed” or “failed” S3 buckets based on rules
+
 ![COV](DataETL.png)
 
 ### 5.2 Monitoring with AWS CloudWatch
 - **Dashboards**: Track S3 bucket size (raw vs. transformed)  
 - **Alarms**: Trigger if usage exceeds 40,000 bytes
+
 ![COV](dashboard.png)
 
 **Key Takeaways**  
