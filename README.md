@@ -57,29 +57,41 @@ The analysis indicated a moderate correlation between increased water temperatur
 ---
 
 ## 2. Descriptive Analysis
-**Project Description**: Summarizing Vancouver data using AWS Glue ETL  
-**Objective**: Provide a descriptive summary (data cataloging & summarization) **without** deep business queries.
 
-**What I Did**  
-- **Data Cataloging**: Created a **Glue Crawler** to automatically detect schemas and populate the **AWS Glue Data Catalog**.
+**Project Title**: Summarizing Vancouver Water Quality Patterns for Annual Review
+
+**Objective:**
+This project provides a descriptive statistical summary of water quality metrics collected from the City of Vancouver. The purpose is to gain a foundational understanding of the data, identify usage trends over time, and help stakeholders recognize recurring behaviors in environmental measurements.
+
+**Dataset:**
+The dataset includes:
+Time-series water quality measurements (temperature, turbidity)
+Sampling details from multiple locations
+Permit and facility information
+Data captured over multiple years and seasons
+
+**Methodology:**
+Data Collection: The dataset was loaded from AWS S3 into AWS Glue.
+Schema Detection: AWS Glue Crawler was used to automatically identify field types and build a catalog.
+ETL Process: AWS Glue ETL transformed the dataset by standardizing formats and calculating:
+Monthly averages
+Year-over-year variations
+Total number of records per location or season
+
+**Tools and Technologies:**
+AWS Glue Crawler, AWS Glue ETL, Amazon S3
+
+**Deliverables:**
+Data catalog in AWS Glue
+Summary tables and basic stats (e.g., average turbidity per month)
+Time-series charts for reports
+
+**Key Findings:**
+The data revealed predictable seasonal fluctuations, with higher turbidity levels recorded in warmer months. Some locations consistently showed higher values than others, indicating possible environmental or infrastructure-based differences.
 
 ![COV](catalog.png)
 
-- **Data Summarization**: Built an **AWS Glue ETL** pipeline to transform the dataset (generating aggregated stats like mean, median, count).
-
 ![COV](summarization.png)
-
-- **Analysis**: This time, *did not* run business questions via Athena; focus was on stable summaries.
-
-**Key Takeaways**  
-- Established a robust data catalog for quick data discovery  
-- Collected aggregated stats to track high-level trends
-
-<!-- Insert a screenshot or diagram related to Descriptive Analysis:
-![Descriptive Analysis Diagram](images/descriptive_analysis.png)
--->
-
----
 
 ## 3. Diagnostic Analysis
 **Project Description**: Investigating underlying issues or anomalies in the Vancouver dataset  
