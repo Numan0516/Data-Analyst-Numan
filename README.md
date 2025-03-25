@@ -176,7 +176,7 @@ Anomaly detection report
 
 Charts highlighting abnormal readings
 
-Root cause matrix (e.g., fishbone diagram or 5-whys)
+Root cause matrix
 
 **Key Findings:**
 
@@ -304,13 +304,11 @@ Data Segregation: Based on validation results, records were routed into two sepa
 
 3. Monitoring and Alerts with AWS CloudWatch:
 
-To ensure real-time visibility and long-term monitoring of data quality performance, AWS CloudWatch was integrated with the Glue ETL jobs. Key metrics and alerts configured:
+To ensure real-time visibility and long-term monitoring of data quality performance, AWS CloudWatch was integrated with S3 buckets and Glue ETL jobs. Key metrics and alerts configured:
 
 S3 Bucket Monitoring: Dashboards track the growth of the passed and failed folders over time.
 
-Error Rate Alerts: Notifications are triggered if the percentage of failed records exceeds a defined threshold (e.g., 10%), indicating possible data collection issues.
-
-Schema Drift Detection: Sudden changes in field structure (like renamed or missing columns) are flagged via Glue job logs, helping to catch schema inconsistencies early.
+Error Rate Alerts: Notifications are triggered if the size of buckets exceeds the defined threshold, indicating possible data collection issues.
 
 **Tools and Technologies Used:**
 
