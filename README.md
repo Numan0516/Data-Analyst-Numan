@@ -10,7 +10,56 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 > 4. [Data Wrangling](#4-data-wrangling)
 > 5. [Data Quality Control & Monitoring](#5-data-quality-control--monitoring)
 
+Project Title: Exploring Temperature-Turbidity Correlation in Vancouver's Water Quality Data
 
+Objective:
+The objective of this project is to perform an in-depth Exploratory Data Analysis (EDA) using the City of Vancouver’s water quality dataset. This analysis focuses on investigating the relationship between temperature and turbidity levels in drinking water systems, with the ultimate aim of understanding if temperature fluctuations can act as a predictor for changes in water clarity. This insight can assist in identifying seasonal or environmental influences on water quality.
+
+Dataset:
+The dataset includes real-world water quality readings collected by the City of Vancouver. Key attributes include:
+
+Temperature: The recorded water temperature at various monitoring points
+
+Turbidity: A measure of water clarity, where higher values indicate more particles or cloudiness
+
+Operating Permit Number, Facility ID, Sample Date, and other operational metadata
+
+Methodology:
+
+Data Storage & Collection: Data was initially stored in Amazon S3 for centralized access and versioning.
+
+Data Profiling: AWS Glue DataBrew was used to profile the data, identify missing values, check column formats, and inspect outliers.
+
+Data Cleaning: A cleaning recipe was created in DataBrew, which included dropping irrelevant columns (e.g., mechanical, permit status), fixing data types, and removing duplicates.
+
+Analysis: Cleaned data was queried using Amazon Athena to explore:
+
+Correlation between temperature and turbidity
+
+Seasonal trends or time-based changes in turbidity
+
+Distribution and variance of turbidity values across different months and temperature ranges
+
+Data Visualization: Trends were visualized using boxplots, histograms, and scatter plots to observe patterns.
+
+Tools and Technologies:
+
+AWS S3, AWS Glue DataBrew, Amazon Athena
+
+SQL, Data Profiling Tools, Jupyter Notebooks (for visualization and validation)
+
+Deliverables:
+
+A detailed Jupyter Notebook with EDA steps and interpretations
+
+Cleaned dataset in S3
+
+SQL queries and outputs via Athena
+
+Summary dashboard showing visual trends and findings
+
+Key Findings:
+The analysis indicated a moderate correlation between increased water temperature and elevated turbidity levels during the summer months. It also uncovered recurring seasonal spikes in turbidity, emphasizing the need for preventive water system maintenance during warm periods.
 ## 1. Exploratory Data Analysis
 **Project Description**: EDA of City of Vancouver water quality data  
 **Objective**: Analyze and understand how changes in temperature might affect turbidity levels.
