@@ -322,8 +322,6 @@ Amazon CloudWatch: For pipeline monitoring and alerting.
 
 SQL & PySpark: For writing validation logic and dynamic transformations inside the ETL jobs.
 
-Jupyter Notebook (Optional): For post-validation checks and visualization of data quality metrics.
-
 **Deliverables:**
 
 ✅ A comprehensive Data Quality Rulebook defining all business logic
@@ -350,29 +348,13 @@ CloudWatch alerts enabled early detection of potential issues in upstream data c
 
 This Data Quality Control initiative not only improved the integrity of the dataset used in the water monitoring system but also established a reusable and scalable framework for future data validation tasks. It significantly boosted confidence in analytical outcomes and ensured that only accurate, complete, and recent data entered the analytics pipeline.
 
-### 5.1 Data Quality Control
-**Project Description**: Implementing data governance checks for City of Vancouver  
-**Objective**: Verify completeness, uniqueness, and freshness of water data before further analysis.
-
-1. **Completeness**: `operating permit number` must be at least 95% populated  
-2. **Uniqueness**: Turbidity values must be at least 99% unique  
-3. **Freshness**: Exclude data older than 1000 days
 
 ![COV](DataQC.png)
 
-- **AWS Glue Visual ETL** pipeline splits data into “passed” or “failed” S3 buckets based on rules
-
 ![COV](DataETL.png)
-
-### 5.2 Monitoring with AWS CloudWatch
-- **Dashboards**: Track S3 bucket size (raw vs. transformed)  
-- **Alarms**: Trigger if usage exceeds 40,000 bytes
 
 ![COV](dashboard.png)
 
-**Key Takeaways**  
-- Automated data quality checks improve dataset reliability  
-- Real-time monitoring allows rapid detection of anomalies
 
 
 
