@@ -239,30 +239,116 @@ Wrangling documentation (recipes, transformations)
 
 Reduced data processing time by 50%. Enabled UCW to generate academic standing reports with more accuracy and less manual effort.
 
-**Project Description**: Data Wrangling for Academic Standing Procedure (UCW)  
-**Objective**: Create a **Data Analysis Pipeline (DAP)** for UCW’s academic standing data.
 
 ![COV](UCW_DAP.png)
 
-**What I Did**  
-- **AWS Glue DataBrew**: Cleaned and standardized student data (dropped irrelevant columns, fixed data types)  
-- **Glue Crawler & ETL**: Stored data in raw, transformed, and curated buckets in **S3**
 
 ![COV](ETL_UCW.png)
 
-- **Consolidation**: Ensured consistent IDs and metrics to enable accurate academic standing checks
 
-**Key Takeaways**  
-- Streamlined the data preparation workflow  
-- Organized data into distinct layers (raw, transformed, curated) for clarity
-
-<!-- Insert a screenshot or diagram for Data Wrangling:
-![Data Wrangling Flow](images/data_wrangling_flow.png)
--->
-
----
 
 ## 5. Data Quality Control & Monitoring
+
+**Objective:**
+
+The objective of this project is to design and implement a comprehensive Data Quality Control (DQC) framework tailored for the City of Vancouver's water quality dataset. The goal is to ensure that all data used in downstream analysis—such as exploratory data analysis, reporting, and predictive modeling—is clean, accurate, and trustworthy. By implementing automated data validation and segregation rules, this project aims to enhance the integrity, reliability, and overall value of the dataset while minimizing the manual effort involved in identifying and correcting data issues.
+
+**Background:**
+
+With the increasing volume of environmental data collected through IoT sensors and water monitoring systems, data quality concerns such as missing values, duplicates, outdated records, and inconsistencies have become more frequent. These issues can compromise the validity of insights drawn from the data and mislead critical decisions. As part of our broader data engineering efforts, this project was initiated to automate the detection and handling of low-quality data before it is ingested into data pipelines for analysis. Stakeholders and analysts needed a structured, automated approach to ensure that only high-quality data was made available for analysis and reporting.
+
+**Scope of the Project:**
+
+The DQC framework is built around three critical dimensions of data quality:
+
+Completeness – Ensures that essential fields like Operating Permit Number are adequately populated. Missing values in these critical fields can impact regulatory compliance and operational tracking.
+
+Uniqueness – Verifies that certain columns (like Turbidity) maintain high distinctiveness, helping detect duplicate or copy-paste errors in data collection.
+
+Freshness – Filters out outdated records (older than 1000 days) to ensure that analytical insights reflect current and relevant conditions.
+
+This structured scope allows the data quality framework to be applied across datasets with similar structures and regulatory importance.
+
+**Methodology:**
+
+1. Defining Data Quality Rules:
+The first phase involved establishing specific data quality thresholds based on business needs and environmental monitoring standards:
+
+Completeness Rule: The Operating Permit Number must be populated in at least 95% of records. This ensures traceability of the sample origin.
+
+Uniqueness Rule: At least 99% of the Turbidity readings should be unique to confirm proper sensor functioning and prevent data duplication.
+
+Freshness Rule: Records older than 1000 days (approximately 3 years) are considered outdated and are filtered out to maintain the relevance of insights.
+
+These rules were documented and approved by stakeholders before pipeline implementation.
+
+2. Building the Glue ETL Pipeline:
+
+Using AWS Glue, a visual ETL job was designed to automate the validation process. The key components of the workflow include:
+
+Data Ingestion: Raw CSV files were stored in Amazon S3 and catalogued using AWS Glue Crawler.
+
+Data Validation Steps:
+
+Applied completeness checks by counting non-null values in critical columns.
+
+Used custom logic in Glue DynamicFrames to calculate distinct counts for uniqueness.
+
+Applied date-based filters to assess data freshness.
+
+Data Segregation: Based on validation results, records were routed into two separate S3 paths:
+
+/passed/ folder for records that met all quality criteria.
+
+/failed/ folder for records that violated any rules for further inspection or reprocessing.
+
+3. Monitoring and Alerts with AWS CloudWatch:
+
+To ensure real-time visibility and long-term monitoring of data quality performance, AWS CloudWatch was integrated with the Glue ETL jobs. Key metrics and alerts configured:
+
+S3 Bucket Monitoring: Dashboards track the growth of the passed and failed folders over time.
+
+Error Rate Alerts: Notifications are triggered if the percentage of failed records exceeds a defined threshold (e.g., 10%), indicating possible data collection issues.
+
+Schema Drift Detection: Sudden changes in field structure (like renamed or missing columns) are flagged via Glue job logs, helping to catch schema inconsistencies early.
+
+**Tools and Technologies Used:**
+
+AWS Glue (Crawler & ETL): For schema detection, rule-based transformations, and workflow automation.
+
+Amazon S3: For raw, passed, and failed data storage.
+
+Amazon CloudWatch: For pipeline monitoring and alerting.
+
+SQL & PySpark: For writing validation logic and dynamic transformations inside the ETL jobs.
+
+Jupyter Notebook (Optional): For post-validation checks and visualization of data quality metrics.
+
+**Deliverables:**
+
+✅ A comprehensive Data Quality Rulebook defining all business logic
+
+✅ Glue ETL job scripts with clearly defined transformation steps
+
+✅ Data segregation into separate S3 folders (passed and failed)
+
+✅ CloudWatch monitoring dashboard with custom metrics and alarms
+
+✅ Validation reports summarizing quality metrics across completeness, uniqueness, and freshness
+
+✅ Documentation of architecture, flow diagrams, and quality logs
+
+**Key Insights and Results:**
+
+Over 98% of the dataset passed all quality checks after the first run, proving the effectiveness of the framework.
+
+The Freshness rule helped filter out nearly 20% of legacy records, leading to more current and actionable analysis in subsequent projects.
+
+Automated separation of failed records saved hours of manual data cleaning and allowed analysts to focus on insights rather than error checking.
+
+CloudWatch alerts enabled early detection of potential issues in upstream data collection, allowing timely corrections before data entered the core analysis environment.
+
+This Data Quality Control initiative not only improved the integrity of the dataset used in the water monitoring system but also established a reusable and scalable framework for future data validation tasks. It significantly boosted confidence in analytical outcomes and ensured that only accurate, complete, and recent data entered the analytics pipeline.
 
 ### 5.1 Data Quality Control
 **Project Description**: Implementing data governance checks for City of Vancouver  
