@@ -183,26 +183,62 @@ Root cause matrix (e.g., fishbone diagram or 5-whys)
 Most anomalies coincided with sensor maintenance periods or data entry gaps. This highlighted the need for better documentation of sensor servicing schedules and automated anomaly flagging.
 
 
-**Project Description**: Investigating underlying issues or anomalies in the Vancouver dataset  
-**Objective**: Diagnose potential factors contributing to unusual data patterns (e.g., sudden spikes in turbidity).
-
-**What I Did**  
-- **Data Collection & Preparation**: Continued using **AWS Glue** (Crawler + ETL) to unify data.  
-- **Trend & Correlation Checks**: Used **DataBrew** to verify data integrity before analyzing.  
-- **Root-Cause Insights**: Explored sensor calibration times, missing data segments, etc., for potential anomalies.  
-- **Analysis Tools**: Focused on basic descriptive statistics, with minimal or no Athena usage here.
-
-**Key Takeaways**  
-- Identified sensor calibration issues or data gaps causing spikes/dips  
-- Reinforced the value of thorough data cleaning and consistent data cataloging
-
-<!-- Insert a screenshot or diagram for Diagnostic Analysis:
-![Diagnostic Analysis Screenshot](images/diagnostic_analysis.png)
--->
-
----
-
 ## 4. Data Wrangling
+
+**Project Title:** Data Wrangling for Academic Standing Analysis at UCW
+
+**Objective:**
+
+To clean, merge, and restructure student academic data to prepare it for academic standing evaluations at the University Canada West. The project ensures that data from various student information systems is consolidated, reliable, and analytics-ready.
+
+**Background:**
+
+UCW needs accurate and timely academic standing reports for administrative and student services. However, data is often scattered across systems, lacking consistency.
+
+**Dataset:**
+
+Includes:
+
+Student demographic data
+
+Course grades, GPA, and credits
+
+Program and department codes
+
+Enrolment records
+
+**Methodology:**
+
+Data Profiling: Used AWS Glue DataBrew to assess field quality.
+
+Cleaning: Dropped irrelevant columns, converted strings to proper data types (e.g., dates, numeric grades).
+
+Transformation: Added calculated fields like cumulative GPA, course completion ratio.
+
+Data Organization: Categorized data into three buckets in S3:
+
+Raw: untouched input
+
+Transformed: cleaned and structured
+
+Curated: final dataset for academic standing logic
+
+**Tools and Technologies:**
+
+AWS Glue DataBrew, Glue ETL, Amazon S3
+
+**Deliverables:**
+
+Three-layered S3 storage
+
+Cleaned and labeled dataset
+
+Wrangling documentation (recipes, transformations)
+
+**Key Achievements:**
+
+Reduced data processing time by 50%. Enabled UCW to generate academic standing reports with more accuracy and less manual effort.
+
 **Project Description**: Data Wrangling for Academic Standing Procedure (UCW)  
 **Objective**: Create a **Data Analysis Pipeline (DAP)** for UCW’s academic standing data.
 
