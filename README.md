@@ -44,35 +44,13 @@ SQL queries and outputs via Athena
 
 **Key Findings:**
 The analysis indicated a moderate correlation between increased water temperature and elevated turbidity levels during the summer months. It also uncovered recurring seasonal spikes in turbidity, emphasizing the need for preventive water system maintenance during warm periods.
-**Project Description**: EDA of City of Vancouver water quality data  
-**Objective**: Analyze and understand how changes in temperature might affect turbidity levels.
-
-**What I Did**  
-
 ![COV](COV_Drawio.png)
-
-- **Data Storage**: Placed the raw data in **Amazon S3**.  
-- **Profiling**: Used **AWS Glue DataBrew** to identify missing values, invalid data types, and duplicate records.
 
 ![COV](profiling.png)
 
 ![COV](profiling1.png)
 
-- **Cleaning**: Created a **DataBrew recipe** to drop unnecessary columns (e.g., permit status, mechanical).  
-- **Analysis**: Employed **Amazon Athena** to query the cleaned data and answer three business questions:
-  1. Correlation between temperature changes and turbidity levels  
-  2. Trends in turbidity over specific time periods  
-  3. Identification of outlier temperature or turbidity readings
 ![BQ](BQ_Example.png)
-
-**Key Takeaways**  
-- Insight into temperature–turbidity correlations  
-- Simplified queries by removing irrelevant columns  
-- Demonstrated speed of AWS Glue DataBrew for data profiling and recipe-based cleaning
-
-
-
-
 
 ---
 
