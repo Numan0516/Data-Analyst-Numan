@@ -13,7 +13,9 @@ Welcome to my portfolio! This repository contains **five key data projects** ill
 
 
 ## 1. Exploratory Data Analysis
+
 **Project Title: Exploring Temperature-Turbidity Correlation in Vancouver's Water Quality Data**
+
 **Objective**:
 The objective of this project is to perform an in-depth Exploratory Data Analysis (EDA) using the City of Vancouver’s water quality dataset. This analysis focuses on investigating the relationship between temperature and turbidity levels in drinking water systems, with the ultimate aim of understanding if temperature fluctuations can act as a predictor for changes in water clarity. This insight can assist in identifying seasonal or environmental influences on water quality.
 
