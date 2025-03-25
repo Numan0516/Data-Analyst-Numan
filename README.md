@@ -124,6 +124,65 @@ The data revealed predictable seasonal fluctuations, with higher turbidity level
 ![COV](summarization.png)
 
 ## 3. Diagnostic Analysis
+
+**Project Title**: Investigating Anomalies in Vancouver Water Quality Data
+
+**Objective:**
+
+The objective is to conduct a diagnostic analysis to identify the underlying causes of abnormal turbidity spikes or missing data trends in Vancouver’s water quality monitoring. The goal is to inform city water departments about potential operational or environmental concerns.
+
+**Background:**
+City departments raised concerns about sudden spikes in turbidity in particular months. Understanding whether these are due to real-world events or system/sensor issues is critical for taking corrective actions.
+
+**Dataset:**
+
+Combines multiple sources:
+
+Sensor logs with timestamps
+
+Turbidity and temperature readings
+
+Location IDs and facility details
+
+**Methodology:**
+
+Data Integration: Combined datasets from various sensors via AWS Glue.
+
+Anomaly Detection: Used DataBrew to check for:
+
+Irregular timestamp gaps
+
+Sudden outlier readings
+
+Invalid or duplicated records
+
+Root Cause Analysis: Evaluated possible issues such as:
+
+Sensor recalibration periods
+
+Sampling errors
+
+Unreported weather events
+
+Segmentation: Analyzed anomalies across different facility IDs and sampling regions
+
+**Tools and Technologies:**
+
+AWS Glue, DataBrew, Amazon S3, Excel (for cross-checking outlier clusters)
+
+**Deliverables:**
+
+Anomaly detection report
+
+Charts highlighting abnormal readings
+
+Root cause matrix (e.g., fishbone diagram or 5-whys)
+
+**Key Findings:**
+
+Most anomalies coincided with sensor maintenance periods or data entry gaps. This highlighted the need for better documentation of sensor servicing schedules and automated anomaly flagging.
+
+
 **Project Description**: Investigating underlying issues or anomalies in the Vancouver dataset  
 **Objective**: Diagnose potential factors contributing to unusual data patterns (e.g., sudden spikes in turbidity).
 
