@@ -322,17 +322,17 @@ SQL & PySpark: For writing validation logic and dynamic transformations inside t
 
 **Deliverables:**
 
-✅ A comprehensive Data Quality Rulebook defining all business logic
+A comprehensive Data Quality Rulebook defining all business logic
 
-✅ Glue ETL job scripts with clearly defined transformation steps
+Glue ETL job scripts with clearly defined transformation steps
 
-✅ Data segregation into separate S3 folders (passed and failed)
+Data segregation into separate S3 folders (passed and failed)
 
-✅ CloudWatch monitoring dashboard with custom metrics and alarms
+CloudWatch monitoring dashboard with custom metrics and alarms
 
-✅ Validation reports summarizing quality metrics across completeness, uniqueness, and freshness
+Validation reports summarizing quality metrics across completeness, uniqueness, and freshness
 
-✅ Documentation of architecture, flow diagrams, and quality logs
+Documentation of architecture, flow diagrams, and quality logs
 
 **Key Insights and Results:**
 
