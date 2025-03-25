@@ -79,28 +79,44 @@ This project provides a descriptive statistical summary of water quality metrics
 
 **Dataset:**
 The dataset includes:
+
 Time-series water quality measurements (temperature, turbidity)
+
 Sampling details from multiple locations
+
 Permit and facility information
+
 Data captured over multiple years and seasons
 
+
 **Methodology:**
+
 Data Collection: The dataset was loaded from AWS S3 into AWS Glue.
+
 Schema Detection: AWS Glue Crawler was used to automatically identify field types and build a catalog.
+
 ETL Process: AWS Glue ETL transformed the dataset by standardizing formats and calculating:
+
 Monthly averages
+
 Year-over-year variations
+
 Total number of records per location or season
 
 **Tools and Technologies:**
+
 AWS Glue Crawler, AWS Glue ETL, Amazon S3
 
 **Deliverables:**
+
 Data catalog in AWS Glue
+
 Summary tables and basic stats (e.g., average turbidity per month)
+
 Time-series charts for reports
 
 **Key Findings:**
+
 The data revealed predictable seasonal fluctuations, with higher turbidity levels recorded in warmer months. Some locations consistently showed higher values than others, indicating possible environmental or infrastructure-based differences.
 
 ![COV](catalog.png)
