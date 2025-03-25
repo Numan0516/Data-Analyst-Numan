@@ -23,28 +23,42 @@ The objective of this project is to perform an in-depth Exploratory Data Analysi
 The dataset includes real-world water quality readings collected by the City of Vancouver.
 
 Key attributes include:
+
 Temperature: The recorded water temperature at various monitoring points
+
 Turbidity: A measure of water clarity, where higher values indicate more particles or cloudiness
+
 Operating Permit Number, Facility ID, Sample Date, and other operational metadata
 
 **Methodology:**
+
 Data Storage & Collection: Data was initially stored in Amazon S3 for centralized access and versioning.
+
 Data Profiling: AWS Glue DataBrew was used to profile the data, identify missing values, check column formats, and inspect outliers.
+
 Data Cleaning: A cleaning recipe was created in DataBrew, which included dropping irrelevant columns (e.g., mechanical, permit status), fixing data types, and removing duplicates.
 
-**Analysis:** Cleaned data was queried using Amazon Athena to explore:
+**Analysis:** 
+Cleaned data was queried using Amazon Athena to explore:
+
 Correlation between temperature and turbidity
+
 Seasonal trends or time-based changes in turbidity
+
 Distribution and variance of turbidity values across different months and temperature ranges
 
 **Tools and Technologies**:
+
 AWS S3, AWS Glue DataBrew, Amazon Athena
 
 **Deliverables**:
+
 Cleaned dataset in S3
+
 SQL queries and outputs via Athena
 
 **Key Findings:**
+
 The analysis indicated a moderate correlation between increased water temperature and elevated turbidity levels during the summer months. It also uncovered recurring seasonal spikes in turbidity, emphasizing the need for preventive water system maintenance during warm periods.
 ![COV](COV_Drawio.png)
 
